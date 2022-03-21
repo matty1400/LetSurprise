@@ -1,16 +1,5 @@
-#fakelogo {
-  height: 50px;
-  width: 50px;
-}
-
-#profile {
-  height: 40px;
-  width: 40px;
-  margin-left: 1200px;
-  border-radius: 30%;
-}
-
-.button {
+#buttonKalender {
+  left: 700px;
   display: inline-block;
   padding: 0.7em 1.7em;
   margin: 0 0.3em 0.3em 0;
@@ -25,18 +14,39 @@
   bottom: 45px;
 }
 
-#buttonKalender {
-  left: 700px;
-}
 #buttonSocialsr {
   left: 750px;
+  display: inline-block;
+  padding: 0.7em 1.7em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #bbc3d8;
+  position: relative;
+  bottom: 45px;
 }
+
 #buttonHelp {
   left: 800px;
+  display: inline-block;
+  padding: 0.7em 1.7em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #bbc3d8;
+  position: relative;
+  bottom: 45px;
 }
 
 a.button7 {
-  float: right;
   bottom: 90px;
   display: inline-block;
   padding: 0.7em 1.7em;
@@ -51,6 +61,113 @@ a.button7 {
   position: relative;
 }
 
-h1 {
-  text-align: center;
+nav {
+  width: 100%;
+  height: 65px;
+  position: relative;
+  background-color: #0a4b33;
+  box-shadow: 0px 2px 8px 0px #333;
+}
+
+.nav-container {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  background: #0a4b33;
+}
+
+.menu {
+  width: 100%;
+  height: 65px;
+  background: #0a4b33;
+}
+
+.menu > .menu-content {
+  width: 200px;
+  height: 65px;
+  float: right;
+  font-family: sans-serif, Arial;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -0.05em;
+  position: relative;
+  color: #fff;
+  line-height: 65px;
+}
+
+.menu > .menu-content > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #fff;
+  right: 151px;
+  top: 50px;
+  display: none;
+}
+
+.login-form {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  background: #fff;
+  right: 58px;
+  top: 60px;
+  border-radius: 3px;
+  border-bottom: 5px solid gray;
+  display: none;
+}
+
+.login-form > form {
+  width: 250px;
+  margin: 25px;
+  font-size: 16px;
+  font-family: sans-serif, Arial;
+  color: gray;
+  letter-spacing: -0.05em;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 250px;
+  height: 30px;
+  border-bottom: 0px;
+  outline: none;
+  box-shadow: inset 0 0 10px #fff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  font-family: sans-serif, Arial;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  width: 95%;
+  height: 35px;
+  background: #0b8256;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif, Arial;
+  color: #fff;
+  outline: none;
+  border: 0px;
+  border-radius: 3px;
+  letter-spacing: -0.05em;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background: #0a4b33;
+}
+#Lostpw {
+  top: 20px;
+  font-family: sans-serif, Arial;
+  font-size: 16px;
+  color: gray;
+  position: relative;
 }
