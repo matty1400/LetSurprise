@@ -11,43 +11,41 @@
 <body>
     
 <nav>
-    <section class="nav-container">
-        <aside class="logo"><img src="./images/Logo_LetSurprise2.png" alt="logo" height="65px" width="200px"></aside>
-        <aside class="menu">
-            <div class="menu-content">
-                <a href="#" id="login">Login</a>
-                <a href="#">Register</a>
+    <img src="./images/Logo_LetSurprise2.png" id="logo" alt="logo">
+    <aside class="menu">
+        <div class="menu-content">
+            <a href="#" id="login">Login</a>
+            <a href="#" id="register">Register</a>
+        </div>
+        <div class="arrow-up"></div> 
+    </aside>
+    <div class="login-form">
+        <form>
+            <div>
+                <input type="text" id="username" placeholder="Username" required/>
             </div>
-            <div class="arrow-up"></div> 
-        </aside>
-        <div class="login-form">
-            <form>
-                <div>
-                    <input type="text" id="username" placeholder="Username" required/>
-                </div>
-                <br>
-                <div>
-                    <input type="Password" id="Password" placeholder="Password" required/>
-                </div>
-                <br>
-                <div>
-                    <input type="submit" id="submit" value="Login"/>
-                </div>
-                <div>
-                    <a href="#" id="Lostpw">Wachtwoord vergeten?</a>
-                </div>
-            </form>
-        </div>
-        <div class="buttonsAbove">
-            <form>
-                <div class="buttons">
-                    <a href="something" id="buttonKalender">Kalender</a>
-                    <a href="something" id="buttonSocialsr">Socials</a>
-                    <a href="something" id="buttonHelp">Help</a>
-                </div>
-            </form>
-        </div>
-    </section>
+            <br>
+            <div>
+                <input type="Password" id="Password" placeholder="Password" required/>
+            </div>
+            <br>
+            <div>
+                <input type="submit" id="submit" value="Login"/>
+            </div>
+            <div>
+                <a href="#" id="Lostpw">Wachtwoord vergeten?</a>
+            </div>
+        </form>
+    </div>
+    <div class="buttonsAbove">
+        <form>
+            <div class="buttons">
+                <a href="something" id="buttonKalender">Kalender</a>
+                <a href="something" id="buttonSocialsr">Socials</a>
+                <a href="something" id="buttonHelp">Help</a>
+            </div>
+        </form>
+    </div>
 </nav>
 
 <script src="./js/script.js"></script>

@@ -1,5 +1,5 @@
 #buttonKalender {
-  left: 700px;
+  left: 1000px;
   display: inline-block;
   padding: 0.7em 1.7em;
   margin: 0 0.3em 0.3em 0;
@@ -10,12 +10,18 @@
   font-weight: 400;
   color: #ffffff;
   background-color: #bbc3d8;
-  position: relative;
+  position: absolute;
   bottom: 45px;
 }
 
+#logo {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+
 #buttonSocialsr {
-  left: 750px;
+  left: 1000px;
   display: inline-block;
   padding: 0.7em 1.7em;
   margin: 0 0.3em 0.3em 0;
@@ -26,12 +32,12 @@
   font-weight: 400;
   color: #ffffff;
   background-color: #bbc3d8;
-  position: relative;
+  position: absolute;
   bottom: 45px;
 }
 
 #buttonHelp {
-  left: 800px;
+  left: 1000px;
   display: inline-block;
   padding: 0.7em 1.7em;
   margin: 0 0.3em 0.3em 0;
@@ -44,36 +50,6 @@
   background-color: #bbc3d8;
   position: relative;
   bottom: 45px;
-}
-
-a.button7 {
-  bottom: 90px;
-  display: inline-block;
-  padding: 0.7em 1.7em;
-  margin: 0 0.3em 0.3em 0;
-  border-radius: 0.2em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: #ffffff;
-  background-color: #3369ff;
-  position: relative;
-}
-
-nav {
-  width: 100%;
-  height: 65px;
-  position: relative;
-  background-color: #0a4b33;
-  box-shadow: 0px 2px 8px 0px #333;
-}
-
-.nav-container {
-  width: 1000px;
-  margin: 0 auto;
-  position: relative;
-  background: #0a4b33;
 }
 
 .menu {
@@ -169,5 +145,5 @@ input[type="submit"]:hover {
   font-family: sans-serif, Arial;
   font-size: 16px;
   color: gray;
-  position: relative;
+  position: absolute;
 }
