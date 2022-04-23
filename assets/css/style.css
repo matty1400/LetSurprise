@@ -2,6 +2,7 @@ body {
   background-color: #aaf0d1;
 }
 
+/* HEADER BOX STYLING */
 .headerBox {
   background-color: #addfad;
   padding: 10px;
@@ -70,6 +71,7 @@ body {
   text-decoration: none;
 }
 
+/* HOVER FUNCTIONS ON HEADER BUTTONS */
 #buttonKalender:hover {
   background-color: #50c878;
 }
