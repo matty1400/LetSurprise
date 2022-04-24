@@ -1,0 +1,152 @@
+body {
+    background-color: #aaf0d1;
+}
+
+/* HEADER BOX STYLING */
+.headerBox {
+background-color: #addfad;
+padding: 10px;
+border: 5px solid #50c878;
+margin: 0;
+}
+
+#logo {
+height: 120px;
+width: 171px;
+}
+
+#profileIcon {
+display: inline-block;
+position: absolute;
+align-items: right;
+height: 35px;
+width: 35px;
+color: #50c878;
+}
+
+.buttons {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+}
+
+#buttonKalender {
+border: 4px solid #50c878;
+padding: 15px 27px;
+background-color:  #aaf0d1;
+font-family: 'Ubuntu';
+font-size: 20px;
+color: #007077;
+text-decoration: none;
+}
+
+#buttonSocials {
+border: 4px solid #50c878;
+padding: 15px 27px;
+background-color:  #aaf0d1;
+font-family: 'Ubuntu';
+font-size: 20px;
+color: #007077;
+text-decoration: none;
+}
+
+#buttonHelp {
+    border: 4px solid #50c878;
+    padding: 15px 27px;
+    background-color:  #aaf0d1;
+    font-family: 'Ubuntu';
+    font-size: 20px;
+    color: #007077;
+    text-decoration: none;
+}
+
+/* LUCKY WHEEL STYLING */
+#buttonWheel {
+    border: 4px solid #50c878;
+    padding: 15px 27px;
+    background-color:  #aaf0d1;
+    font-family: 'Ubuntu';
+    font-size: 20px;
+    color: #007077;
+    text-decoration: none;
+}
+
+#title {
+    font-family: 'Ubuntu';
+    color: #007077;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    top: 200px;
+}
+
+.lucky_wheel {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#markerWheel {
+    position: absolute;
+    width: 60px;
+    left: 172px;
+    top: 22px;
+    z-index: 2;
+}
+
+#wheel {
+    position: relative;
+    width: 120%;
+    height: 120%;
+    right: 38px;
+    top: 20px;
+}
+
+#spinWheel {
+    display: block;
+    width: 250px;
+    margin: 40px;
+    cursor: pointer;
+    position: absolute;
+    left: 38px;
+    top: 475px;
+}
+
+#betterLuck {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 200px;
+    z-index: 0;
+    visibility: hidden;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+}
+
+#betterLuck.show {
+    visibility: visible;
+}
+
+/* HOVER FUNCTIONS ON HEADER BUTTONS */
+#buttonKalender:hover {
+background-color: #50c878;
+}
+
+#buttonSocials:hover {
+background-color: #50c878;
+}
+
+#buttonHelp:hover {
+background-color: #50c878;
+}
+
+#buttonWheel:hover {
+background-color: #50c878;
+}
+
+/* WHEEL SPIN BUTTON HOVER FUNCTION */
+#spinWheel:hover {
+    opacity: 0.8;
+}
