@@ -1,6 +1,103 @@
-* {
+body {
+  background-color: #aaf0d1;
+}
+
+#title {
+  font-family: 'Ubuntu';
+  color: #007077;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  top: 200px;
+}
+
+/* HEADER BOX STYLING */
+.headerBox {
+  background-color: #addfad;
+  padding: 10px;
+  border: 5px solid #50c878;
   margin: 0;
-  padding: 0;
+}
+
+#logo {
+  height: 120px;
+  width: 171px;
+}
+
+#profileIcon {
+  display: inline-block;
+  position: absolute;
+  align-items: right;
+  height: 35px;
+  width: 35px;
+  color: #50c878;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#buttonKalender {
+  border: 4px solid #50c878;
+  padding: 15px 27px;
+  background-color:  #aaf0d1;
+  font-family: 'Ubuntu';
+  font-size: 20px;
+  color: #007077;
+  text-decoration: none;
+}
+
+#buttonSocials {
+  border: 4px solid #50c878;
+  padding: 15px 27px;
+  background-color:  #aaf0d1;
+  font-family: 'Ubuntu';
+  font-size: 20px;
+  color: #007077;
+  text-decoration: none;
+}
+
+#buttonHelp {
+  border: 4px solid #50c878;
+  padding: 15px 27px;
+  background-color:  #aaf0d1;
+  font-family: 'Ubuntu';
+  font-size: 20px;
+  color: #007077;
+  text-decoration: none;
+}
+
+#buttonWheel {
+  border: 4px solid #50c878;
+  padding: 15px 27px;
+  background-color:  #aaf0d1;
+  font-family: 'Ubuntu';
+  font-size: 20px;
+  color: #007077;
+  text-decoration: none;
+}
+
+/* HOVER FUNCTIONS ON HEADER BUTTONS */
+#buttonKalender:hover {
+  background-color: #50c878;
+}
+
+#buttonSocials:hover {
+  background-color: #50c878;
+}
+
+#buttonHelp:hover {
+  background-color: #50c878;
+}
+
+#buttonWheel:hover {
+  background-color: #50c878;
+}
+
+* {
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
 }
@@ -18,91 +115,88 @@ html {
   align-items: center;
 }
 
-.calendar {
-  width: 80rem;
-  height: 40rem;
+.kalender {
+  width: 100rem;
+  height: 53rem;
   background-color: #222227;
-  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2rem 3rem;
 }
 
-.month {
+.maand {
   width: 100%;
   height: 12rem;
-  background-color: #167e56;
+  background-color: #50c878;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 2rem; /* boven oncer, 2 -> right and left */
   text-align: center;
-  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0.2rem 1.5rem;
 }
 
-.month i {
-  font-size: 2.5rem;
-  cursor: pointer;
-}
-
-.month h1 {
-  font-size: 3rem;
-  font-weight: 400;
+.maand h1 {
+  font-family: 'Ubuntu';
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
+  letter-spacing: 1rem;
 }
 
-.month p {
-  font-size: 1.6rem;
+.maand p {
+  font-size: 1.5rem;
 }
 
-.weekdays {
+.maand i {
+  font-size: 3rem;
+}
+
+.dagen {
   width: 100%;
   height: 5rem;
-  padding: 0 0.4rem;
+  padding: 0 0.5rem;
   display: flex;
   align-items: center;
 }
 
-.weekdays div {
+.dagen div {
+  font-family: 'Ubuntu';
   font-size: 1.5rem;
   font-weight: 400;
-  letter-spacing: 0.1rem;
-  width: calc(44.2rem / 7);
+  letter-spacing: 0.5rem;
+  width: calc(100.2rem / 7);
   display: flex;
   justify-content: center;
   align-items: center;
-  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0.3rem 0.5rem black;
 }
 
-.days {
+.dag {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 0.2rem;
+  padding: 1rem;
 }
 
-.days div {
-  font-size: 1.4rem;
+.dag div {
+  font-size: 1.3rem;
   margin: 0.3rem;
-  width: calc(40.2rem / 7);
+  width: calc(93.8rem / 7);
   height: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
-  transition: background-color 0.2s;
+  text-shadow: 0 0.3rem 0.5rem black;
 }
 
-.days div:hover:not(.today) {
-  background-color: #262626;
-  border: 0.2rem solid #777;
-  cursor: pointer;
-}
-
-.prev-date,
-.next-date {
+.vorigeDate, .volgendeDate{
   opacity: 0.5;
 }
 
-.today {
-  background-color: #167e56;
+.vdg {
+  background-color: #50c878;
+}
+
+.dag div:hover:not(.vdg) {
+  background-color: #262626;
+  border: 0.2rem solid #777;
 }

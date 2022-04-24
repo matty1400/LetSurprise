@@ -13,11 +13,32 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
   </head>
   <body>
+     <!-- TITLE -->
+     <h1 id="title">
+      Kalender
+     </h1>
+    <!-- HEADERBOX WITH BUTTONS -->
+    <div class="headerBox">
+        <img src="./assets/images/Logo_LetSurprise2.png" id="logo" alt="Logo">
+        <img src="./assets/images/profile_icon.png" id="profileIcon" alt="Icon of profile">
+        <div class="buttons">
+            <a href="something" id="buttonKalender">Kalender</a>
+            <a href="something" id="buttonSocials">Socials</a>
+            <a href="something" id="buttonHelp">Help</a>
+            <a href="luckywheel.html" id="buttonWheel">Lucky wheel</a>
+        </div>
+    </div>
+    
+    <!-- KALENDER -->
     <div class="container">
-      <div class="calendar">
-        <div class="month">
+      <div class="kalender">
+        <div class="maand">
           <i class="fas fa-angle-left prev"></i>
           <div class="date">
             <h1></h1>
@@ -25,16 +46,16 @@
           </div>
           <i class="fas fa-angle-right next"></i>
         </div>
-        <div class="weekdays">
+        <div class="dagen">
+          <div>Zo</div>
           <div>Ma</div>
           <div>Di</div>
           <div>Wo</div>
           <div>Do</div>
           <div>Vr</div>
           <div>Za</div>
-          <div>Zo</div>
         </div>
-        <div class="days"></div>
+        <div class="dag"></div>
       </div>
     </div>
 
