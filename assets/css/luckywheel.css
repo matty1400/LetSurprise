@@ -125,10 +125,6 @@ text-decoration: none;
     transition: 0.3s ease-in-out;
 }
 
-#betterLuck.show {
-    visibility: visible;
-}
-
 /* HOVER FUNCTIONS ON HEADER BUTTONS */
 #buttonKalender:hover {
 background-color: #50c878;
