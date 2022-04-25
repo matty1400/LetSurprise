@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="./assets/css/style.css" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- HEADERBOX WITH BUTTONS -->
+    <div class="headerBox">
+        <a href="index.html">
+            <img src="./assets/images/Logo_LetSurprise2.png" id="logo" alt="Logo">
+        </a>
+        <img src="./assets/images/profile_icon.png" id="profileIcon" alt="Icon of profile">
+        <div class="buttons">
+            <a href="something" id="buttonKalender">Kalender</a>
+            <a href="something" id="buttonSocials">Socials</a>
+            <a href="something" id="buttonHelp">Help</a>
+            <a href="luckywheel.html" id="buttonWheel">Lucky wheel</a>
+            <a href="Log_in.html" id="buttonLogin">Log-in</a>
+            <a href="Register.html" id="buttonRegister">Register</a>
+        </div>
+    </div>
+
+    <h1>
+        add a user
+    </h1>
+
+    <form action="./assets/API/register_user.php" method="post">
+        <label for="firstname">
+            Firstname
+        </label>
+        <br>
+        <input type="text" id="firstname" name="firstname" placeholder="your firstname">
+        <br>
+        <label for="lastname">
+            Lastname
+        </label>
+        <br>
+        <input type="text" id="lastname" name="lastname" placeholder="your lastname">
+        <br>
+        <label for="Email">
+            E-mail
+        </label>
+        <br>
+        <input type="text" id="Email" name="Email" placeholder="E-mail">
+        <br>
+
+        <label for="Password">
+            Password
+            </label>
+            <br>
+            <input type="text" id="Password" name="Password" placeholder="Password">
+            <br>
+
+        <input type="submit" value="Register">
+        <a href="/LetSurprise/Log_in.html" >
+            Log In
+        </a>
+    </form>
+    </body>
+</html>
