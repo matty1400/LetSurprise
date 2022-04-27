@@ -8,6 +8,7 @@
             
         // Make the connection
         $conn = mysqli_connect($hostname, $user, $password, $database);
+        
 
         // Check if the connection is working
         if ($conn == false) {
@@ -66,5 +67,6 @@
   
           return $result;
     }
+
 
   
