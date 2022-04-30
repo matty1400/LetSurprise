@@ -33,6 +33,11 @@ body {
   color: #50c878;
 }
 
+#profileIcon {
+  right: 415px;
+  top: 163px;
+}
+
 /* BUTTON STYLING */
 .buttons {
   display: flex;

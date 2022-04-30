@@ -1,5 +1,36 @@
-body {
-  background-color: #aaf0d1;
+.background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.frontText {
+  text-align: center;
+  z-index: 1;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+#titleIndex {
+  font-family: 'Ubuntu';
+  color: #fff;
+  font-size: 4rem;
+}
+
+#slogan {
+  font-family: 'Ubuntu';
+  color: #fff;
+  font-size: 2rem;
 }
 
 /* HEADER BOX STYLING */
@@ -22,6 +53,11 @@ body {
   height: 35px;
   width: 35px;
   color: #50c878;
+}
+
+#profileIcon {
+  right: 415px;
+  top: 163px;
 }
 
 /* BUTTON STYLING */
