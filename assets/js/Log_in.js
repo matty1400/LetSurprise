@@ -1,18 +1,10 @@
 
 var emailElement = document.getElementById("Email").value;
-
-
-
-
 var loginButtonElement = document.getElementById("Log-in_button");
-
-
-
-
 
 function getUser(){
     var email = document.getElementById("Email").value;
-    fetch("/LetSurprise/assets/API/get_credentials.php?email="+email)
+    fetch("assets/API/get_credentials.php?email=" + email)
     .then(function (response){
         return response.json();
     })
@@ -23,12 +15,8 @@ function getUser(){
             sessionStorage.setItem("firstname",data[0].firstName);
             sessionStorage.setItem("lastname",data[0].lastName);
             
-            window.location.href = "http://localhost/LetSurprise/index.html"
-        }
-        
-        
-        
-        
+            window.location.href = "http://localhost/index.html"
+        }    
     });
 };
 
@@ -37,5 +25,4 @@ loginButtonElement.addEventListener("click",function(){
     var passwordElement = document.getElementById("Password").value;
 
     getUser();
-})
-
+});

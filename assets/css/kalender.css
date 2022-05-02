@@ -13,10 +13,11 @@ body {
 
 /* HEADER BOX STYLING */
 .headerBox {
+  display: flex;
   background-color: #addfad;
   padding: 10px;
   border: 5px solid #50c878;
-  margin: 0;
+  justify-content: space-between;
 }
 
 #logo {
@@ -31,11 +32,7 @@ body {
   height: 35px;
   width: 35px;
   color: #50c878;
-}
-
-#profileIcon {
-  right: 415px;
-  top: 163px;
+  margin-left: 100px;
 }
 
 /* BUTTON STYLING */
@@ -54,6 +51,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
+  margin-left: 18px;
 }
 
 #buttonRegister {
@@ -64,6 +62,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
+  margin-left: 18px;
 }
 
 #buttonKalender {
@@ -74,6 +73,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
+  margin-left: 50px;
 }
 
 #buttonSocials {
@@ -84,6 +84,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
+  margin-left: 50px;
 }
 
 #buttonHelp {
@@ -94,6 +95,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
+  margin-left: 50px;
 }
 
 #buttonWheel {
@@ -104,6 +106,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
+  margin-left: 50px;
 }
 
 /* HOVER FUNCTIONS ON HEADER BUTTONS */
