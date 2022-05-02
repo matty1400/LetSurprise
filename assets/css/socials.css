@@ -33,21 +33,10 @@ body {
 
 #profileIcon {
   display: inline-block;
-  position: absolute;
-  align-items: right;
   height: 35px;
   width: 35px;
   color: #50c878;
-  margin-left: 50px;
-}
-
-#facebookLogo {
-  width: 100px;
-  height: auto;
-}
-
-#facebookLogo:hover {
-  opacity: 0.8;
+  margin-left: 100px;
 }
 
 /* BUTTON STYLING */
@@ -147,4 +136,13 @@ body {
 
 #buttonRegister:hover {
   background-color: #50c878;
+}
+
+#facebookLogo {
+  width: 100px;
+  height: auto;
+}
+
+#facebookLogo:hover {
+  opacity: 0.8;
 }

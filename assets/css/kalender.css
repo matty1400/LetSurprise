@@ -27,8 +27,6 @@ body {
 
 #profileIcon {
   display: inline-block;
-  position: absolute;
-  align-items: right;
   height: 35px;
   width: 35px;
   color: #50c878;

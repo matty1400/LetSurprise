@@ -29,8 +29,6 @@ body {
 
 #profileIcon {
   display: inline-block;
-  position: absolute;
-  align-items: right;
   height: 35px;
   width: 35px;
   color: #50c878;
@@ -53,6 +51,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
+  margin-left: 18px;
 }
 
 #buttonRegister {
@@ -63,6 +62,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
+  margin-left: 18px;
 }
 
 #buttonKalender {

@@ -9,32 +9,30 @@ body {
     padding: 10px;
     border: 5px solid #50c878;
     justify-content: space-between;
-}
+  }
   
-#logo {
+  #logo {
     height: 120px;
     width: 171px;
-}
+  }
   
-#profileIcon {
+  #profileIcon {
     display: inline-block;
-    position: absolute;
-    align-items: right;
     height: 35px;
     width: 35px;
     color: #50c878;
     margin-left: 100px;
-}
+  }
   
   /* BUTTON STYLING */
-.buttons {
+  .buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-}
+  }
   
-#buttonLogin {
+  #buttonLogin {
     border: 4px solid #50c878;
     padding: 15px 27px;
     background-color:  #aaf0d1;
@@ -43,9 +41,9 @@ body {
     color: #007077;
     text-decoration: none;
     margin-left: 18px;
-}
+  }
   
-#buttonRegister {
+  #buttonRegister {
     border: 4px solid #50c878;
     padding: 15px 27px;
     background-color:  #aaf0d1;
@@ -54,9 +52,9 @@ body {
     color: #007077;
     text-decoration: none;
     margin-left: 18px;
-}
+  }
   
-#buttonKalender {
+  #buttonKalender {
     border: 4px solid #50c878;
     padding: 15px 27px;
     background-color:  #aaf0d1;
@@ -65,9 +63,9 @@ body {
     color: #007077;
     text-decoration: none;
     margin-left: 50px;
-}
+  }
   
-#buttonSocials {
+  #buttonSocials {
     border: 4px solid #50c878;
     padding: 15px 27px;
     background-color:  #aaf0d1;
@@ -76,9 +74,9 @@ body {
     color: #007077;
     text-decoration: none;
     margin-left: 50px;
-}
+  }
   
-#buttonHelp {
+  #buttonHelp {
     border: 4px solid #50c878;
     padding: 15px 27px;
     background-color:  #aaf0d1;
@@ -87,9 +85,9 @@ body {
     color: #007077;
     text-decoration: none;
     margin-left: 50px;
-}
+  }
   
-#buttonWheel {
+  #buttonWheel {
     border: 4px solid #50c878;
     padding: 15px 27px;
     background-color:  #aaf0d1;
@@ -98,7 +96,7 @@ body {
     color: #007077;
     text-decoration: none;
     margin-left: 50px;
-}
+  }
 
 /* LUCKY WHEEL STYLING */
 #buttonWheel {
@@ -109,15 +107,6 @@ body {
     font-size: 20px;
     color: #007077;
     text-decoration: none;
-}
-
-#title {
-    font-family: 'Ubuntu';
-    color: #007077;
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-    top: 200px;
 }
 
 .lucky_wheel {
