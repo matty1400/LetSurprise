@@ -1,0 +1,26 @@
+body {
+  background-color: #aaf0d1;
+}
+
+#logo {
+  height: 120px;
+  width: 171px;
+}
+
+#title {
+  font-family: 'Ubuntu';
+  color: #007077;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  top: 200px;
+}
+
+#confirmed {
+    font-family: 'Ubuntu';
+    color: #007077;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    top: 200px;
+  }
