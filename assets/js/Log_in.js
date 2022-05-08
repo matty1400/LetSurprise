@@ -1,5 +1,6 @@
 
 var emailElement = document.getElementById("Email").value;
+var loginSuccessElement = document.getElementById("loginSuccess");
 
 
 
@@ -22,9 +23,11 @@ function getUser(){
             sessionStorage.setItem("userID",data[0].personId.toString());
             sessionStorage.setItem("firstname",data[0].firstName);
             sessionStorage.setItem("lastname",data[0].lastName);
+            alert("success");
             
-            window.location.href = "http://localhost/LetSurprise/index.html"
+            window.location.href = "http://localhost/LetSurprise/index.html";
         }
+       
         
         
         
