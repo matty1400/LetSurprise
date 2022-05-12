@@ -41,33 +41,60 @@
           <img src="./assets/images/profile_icon.png" id="profileIcon" alt="Icon of profile">
           <a href="Log_in.html" id="buttonLogin">Log-in</a>
           <a href="Register.html" id="buttonRegister">Register</a>
+          <a href="./user.html">
+            <img src="./assets/images/profile_icon.png" id="profileIcon" alt="Icon of profile">
+          </a>
+            <a href="Log_in.html" id="buttonLogin">Log-in</a>
+            <a href="Register.html" id="buttonRegister">Register</a>
       </div>
   </div>
 
     <!-- KALENDER -->
-    <div class="container">
-      <div class="kalender">
-        <div class="maand">
-          <i class="fas fa-angle-left prev"></i>
-          <div class="date">
-            <h1></h1>
-            <p></p>
+    <div id="container">
+        <div id="header">
+          <div id="monthDisplay"></div>
+          <div>
+            <button id="NRbol" onclick="window.open('https://www.bol.com/be/nl/','_blank')">Bol.com</button>
           </div>
-          <i class="fas fa-angle-right next"></i>
+          <div>
+            <button id="backButton">Previous</button>
+            <button id="nextButton">Next</button>
+          </div>
         </div>
-        <div class="dagen">
-          <div>Zo</div>
-          <div>Ma</div>
-          <div>Di</div>
-          <div>Wo</div>
-          <div>Do</div>
-          <div>Vr</div>
-          <div>Za</div>
+  
+        <div id="weekdays">
+          <div>Sunday</div>
+          <div>Monday</div>
+          <div>Tuesday</div>
+          <div>Wednesday</div>
+          <div>Thursday</div>
+          <div>Friday</div>
+          <div>Saturday</div>
         </div>
-        <div class="dag"></div>
+  
+        <div id="calendar"></div>
       </div>
+  
+      <div id="newEventModal">
+        <h2>New Event</h2>
+  
+        <input id="eventTitleInput" placeholder="Event Title" />
+  
+        <button id="saveButton">Save</button>
+        <button id="cancelButton">Cancel</button>
+      </div>
+  
+      <div id="deleteEventModal">
+        <h2>Event</h2>
+  
+        <p id="eventText"></p>
+  
+        <button id="deleteButton">Delete</button>
+        <button id="closeButton">Close</button>
+      </div>
+  
+      <div id="modalBackDrop"></div>
     </div>
-
     <script src="./assets/js/kalender.js"></script>
     <script src="./assets/js/test.js"></script>
   </body>
