@@ -1,4 +1,3 @@
-
 var emailElement = document.getElementById("Email").value;
 var loginButtonElement = document.getElementById("Log-in_button");
 

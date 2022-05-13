@@ -43,6 +43,7 @@ body {
   width: 35px;
   color: #50c878;
   margin-left: 10px;
+  margin-right: 55px;
 }
 
 /* BUTTON STYLING */
@@ -53,28 +54,6 @@ body {
   align-items: center;
 }
 
-#buttonLogin {
-  border: 4px solid #50c878;
-  padding: 15px 27px;
-  background-color:  #aaf0d1;
-  font-family: 'Ubuntu';
-  font-size: 20px;
-  color: #007077;
-  text-decoration: none;
-  margin-left: 18px;
-}
-
-#buttonRegister {
-  border: 4px solid #50c878;
-  padding: 15px 27px;
-  background-color:  #aaf0d1;
-  font-family: 'Ubuntu';
-  font-size: 20px;
-  color: #007077;
-  text-decoration: none;
-  margin-left: 18px;
-}
-
 #buttonKalender {
   border: 4px solid #50c878;
   padding: 15px 27px;
@@ -83,7 +62,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
-  margin-left: 50px;
+  margin-left: 65px;
 }
 
 #buttonSocials {
@@ -94,7 +73,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
-  margin-left: 50px;
+  margin-left: 65px;
 }
 
 #buttonHelp {
@@ -105,7 +84,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
-  margin-left: 50px;
+  margin-left: 65px;
 }
 
 #buttonWheel {
@@ -116,7 +95,8 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
-  margin-left: 50px;
+  margin-left: 65px;
+  margin-right: 65px;
 }
 
 #dropdown {
@@ -137,6 +117,7 @@ body {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  font-family: 'Ubuntu';
 }
 
 .dropdown-content a {
