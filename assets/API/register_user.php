@@ -6,8 +6,6 @@
  $email = $_POST["Email"];
  $password = $_POST["Password"];
  
- 
- 
  procedure("call addPerson('$password','$email','$firstname','$lastname');");
 ?>
 

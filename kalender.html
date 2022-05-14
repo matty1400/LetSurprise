@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+    <link href="./assets/css/kalender.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+</head>
+  <body>
+    <!-- HEADERBOX WITH BUTTONS -->
+    <div class="headerBox">
+        <a href="index.html">
+            <img src="./assets/images/Logo_LetSurprise2.png" id="logo" alt="Logo">
+        </a>
+        <span id="userName"></span>
+        <div class="buttons">
+          <a href="kalender.html" id="buttonKalender">Kalender</a>
+          <a href="socials.html" id="buttonSocials">Socials</a>
+          <a href="help.html" id="buttonHelp">Help</a>
+          <a href="luckywheel.html" id="buttonWheel">Lucky wheel</a>
+          <div class="dropdown-menu">
+              <img src="./assets/images/dropdown.png" id="dropdown" alt="Dropdown triangle">
+              <div class="dropdown-content">
+                  <a>Settings</a>
+                  <a href="./user.html">Wishlist</a>
+                  <a>Log-out</a>
+              </div>
+          </div>
+          <img src="./assets/images/profile_icon.png" id="profileIcon" alt="Icon of profile">
+      </div>
+  </div>
+
+    <!-- KALENDER -->
+    <div id="container">
+        <div id="header">
+          <div id="monthDisplay"></div>
+          <div>
+            <button id="NRbol" onclick="window.open('https://www.bol.com/be/nl/','_blank')">Bol.com</button>
+          </div>
+          <div>
+            <button id="backButton">Previous</button>
+            <button id="nextButton">Next</button>
+          </div>
+        </div>
+  
+        <div id="weekdays">
+          <div>Sunday</div>
+          <div>Monday</div>
+          <div>Tuesday</div>
+          <div>Wednesday</div>
+          <div>Thursday</div>
+          <div>Friday</div>
+          <div>Saturday</div>
+        </div>
+  
+        <div id="calendar"></div>
+      </div>
+  
+      <div id="newEventModal">
+        <h2>New Event</h2>
+  
+        <input id="eventTitleInput" placeholder="Event Title" />
+  
+        <button id="saveButton">Save</button>
+        <button id="cancelButton">Cancel</button>
+      </div>
+  
+      <div id="deleteEventModal">
+        <h2>Event</h2>
+  
+        <p id="eventText"></p>
+  
+        <button id="deleteButton">Delete</button>
+        <button id="closeButton">Close</button>
+      </div>
+  
+      <div id="modalBackDrop"></div>
+    </div>
+    <script src="./assets/js/kalender.js"></script>
+    <script src="./assets/js/test.js"></script>
+  </body>
+</html>
