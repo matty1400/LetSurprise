@@ -158,11 +158,11 @@ body {
   background-color: #50c878;
 }
 
-#facebookLogo {
+#instagramLogo {
   width: 100px;
   height: auto;
 }
 
-#facebookLogo:hover {
+#instagramLogo:hover {
   opacity: 0.8;
 }

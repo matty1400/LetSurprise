@@ -14,7 +14,7 @@ function getUser(){
             sessionStorage.setItem("firstname",data[0].firstName);
             sessionStorage.setItem("lastname",data[0].lastName);
             
-            window.location.href = "http://localhost/index.html"
+            window.location.href = "http://localhost/indexloggedin.html"
         }    
     });
 };
