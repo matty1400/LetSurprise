@@ -19,46 +19,67 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
   </head>
   <body>
-     <!-- TITLE -->
-     <h1 id="title">
-      Kalender
-     </h1>
     <!-- HEADERBOX WITH BUTTONS -->
     <div class="headerBox">
-        <img src="./assets/images/Logo_LetSurprise2.png" id="logo" alt="Logo">
-        <img src="./assets/images/profile_icon.png" id="profileIcon" alt="Icon of profile">
-        <div class="buttons">
-            <a href="something" id="buttonKalender">Kalender</a>
-            <a href="something" id="buttonSocials">Socials</a>
-            <a href="something" id="buttonHelp">Help</a>
-            <a href="luckywheel.html" id="buttonWheel">Lucky wheel</a>
-        </div>
-    </div>
-    
-    <!-- KALENDER -->
-    <div class="container">
-      <div class="kalender">
-        <div class="maand">
-          <i class="fas fa-angle-left prev"></i>
-          <div class="date">
-            <h1></h1>
-            <p></p>
-          </div>
-          <i class="fas fa-angle-right next"></i>
-        </div>
-        <div class="dagen">
-          <div>Zo</div>
-          <div>Ma</div>
-          <div>Di</div>
-          <div>Wo</div>
-          <div>Do</div>
-          <div>Vr</div>
-          <div>Za</div>
-        </div>
-        <div class="dag"></div>
+      <a href="index.html">
+          <img src="./assets/images/Logo_LetSurprise2.png" id="logo" alt="Logo">
+      </a>
+      <span id="userName"></span>
+      <div class="buttons">
+          <a href="kalender.html" id="buttonKalender">Kalender</a>
+          <a href="socials.html" id="buttonSocials">Socials</a>
+          <a href="help.html" id="buttonHelp">Help</a>
+          <a href="luckywheel.html" id="buttonWheel">Lucky wheel</a>
+            <img src="./assets/images/profile_icon.png" id="profileIcon" alt="Icon of profile">
+            <a href="Log_in.html" id="buttonLogin">Log-in</a>
+            <a href="Register.html" id="buttonRegister">Register</a>
       </div>
-    </div>
+  </div>
 
+    <!-- KALENDER -->
+    <div id="container">
+        <div id="header">
+          <div id="monthDisplay"></div>
+          <div>
+            <button id="backButton">Vorige</button>
+            <button id="nextButton">Volgende</button>
+          </div>
+        </div>
+  
+        <div id="weekdays">
+          <div>Sunday</div>
+          <div>Monday</div>
+          <div>Tuesday</div>
+          <div>Wednesday</div>
+          <div>Thursday</div>
+          <div>Friday</div>
+          <div>Saturday</div>
+        </div>
+  
+        <div id="calendar"></div>
+      </div>
+  
+      <div id="newEventModal">
+        <h2>New Event</h2>
+  
+        <input id="eventTitleInput" placeholder="Event Title" />
+  
+        <button id="saveButton">Save</button>
+        <button id="cancelButton">Cancel</button>
+      </div>
+  
+      <div id="deleteEventModal">
+        <h2>Event</h2>
+  
+        <p id="eventText"></p>
+  
+        <button id="deleteButton">Delete</button>
+        <button id="closeButton">Close</button>
+      </div>
+  
+      <div id="modalBackDrop"></div>
+    </div>
     <script src="./assets/js/kalender.js"></script>
+    <script src="./assets/js/test.js"></script>
   </body>
 </html>

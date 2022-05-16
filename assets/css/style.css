@@ -1,13 +1,45 @@
-body {
-  background-color: #aaf0d1;
+.background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.frontText {
+  text-align: center;
+  z-index: 1;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+#titleIndex {
+  font-family: 'Ubuntu';
+  color: #fff;
+  font-size: 4rem;
+}
+
+#slogan {
+  font-family: 'Ubuntu';
+  color: #fff;
+  font-size: 2rem;
 }
 
 /* HEADER BOX STYLING */
 .headerBox {
+  display: flex;
   background-color: #addfad;
   padding: 10px;
   border: 5px solid #50c878;
-  margin: 0;
+  justify-content: space-between;
 }
 
 #logo {
@@ -17,11 +49,10 @@ body {
 
 #profileIcon {
   display: inline-block;
-  position: absolute;
-  align-items: right;
   height: 35px;
   width: 35px;
   color: #50c878;
+  margin-left: 100px;
 }
 
 /* BUTTON STYLING */
@@ -40,6 +71,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
+  margin-left: 18px;
 }
 
 #buttonRegister {
@@ -50,6 +82,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
+  margin-left: 18px;
 }
 
 #buttonKalender {
@@ -60,6 +93,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
+  margin-left: 50px;
 }
 
 #buttonSocials {
@@ -70,6 +104,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
+  margin-left: 50px;
 }
 
 #buttonHelp {
@@ -80,6 +115,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
+  margin-left: 50px;
 }
 
 #buttonWheel {
@@ -90,6 +126,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
+  margin-left: 50px;
 }
 
 /* HOVER FUNCTIONS ON HEADER BUTTONS */

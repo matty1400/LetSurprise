@@ -13,10 +13,11 @@ body {
 
 /* HEADER BOX STYLING */
 .headerBox {
+  display: flex;
   background-color: #addfad;
   padding: 10px;
   border: 5px solid #50c878;
-  margin: 0;
+  justify-content: space-between;
 }
 
 #logo {
@@ -26,18 +27,40 @@ body {
 
 #profileIcon {
   display: inline-block;
-  position: absolute;
-  align-items: right;
   height: 35px;
   width: 35px;
   color: #50c878;
+  margin-left: 100px;
 }
 
+/* BUTTON STYLING */
 .buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+}
+
+#buttonLogin {
+  border: 4px solid #50c878;
+  padding: 15px 27px;
+  background-color:  #aaf0d1;
+  font-family: 'Ubuntu';
+  font-size: 20px;
+  color: #007077;
+  text-decoration: none;
+  margin-left: 18px;
+}
+
+#buttonRegister {
+  border: 4px solid #50c878;
+  padding: 15px 27px;
+  background-color:  #aaf0d1;
+  font-family: 'Ubuntu';
+  font-size: 20px;
+  color: #007077;
+  text-decoration: none;
+  margin-left: 18px;
 }
 
 #buttonKalender {
@@ -48,6 +71,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
+  margin-left: 50px;
 }
 
 #buttonSocials {
@@ -58,6 +82,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
+  margin-left: 50px;
 }
 
 #buttonHelp {
@@ -68,6 +93,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
+  margin-left: 50px;
 }
 
 #buttonWheel {
@@ -78,6 +104,7 @@ body {
   font-size: 20px;
   color: #007077;
   text-decoration: none;
+  margin-left: 50px;
 }
 
 /* HOVER FUNCTIONS ON HEADER BUTTONS */
@@ -97,106 +124,134 @@ body {
   background-color: #50c878;
 }
 
-* {
-  box-sizing: border-box;
-  font-family: "Quicksand", sans-serif;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-.container {
-  width: 100%;
-  height: 100vh;
-  color: #eee;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.kalender {
-  width: 100rem;
-  height: 53rem;
-  background-color: #222227;
-  box-shadow: 0 2rem 3rem;
-}
-
-.maand {
-  width: 100%;
-  height: 12rem;
+#buttonLogin:hover {
   background-color: #50c878;
+}
+
+#buttonRegister:hover {
+  background-color: #50c878;
+}
+* {
+  font-family: "Ubuntu";
+}
+
+button {
+  width: 75px;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px gray;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+#header {
+  padding: 10px;
+  color: #d36c6c;
+  font-size: 26px;
+  font-family: sans-serif;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem; /* boven oncer, 2 -> right and left */
-  text-align: center;
-  text-shadow: 0 0.2rem 1.5rem;
 }
-
-.maand h1 {
-  font-family: 'Ubuntu';
-  text-transform: uppercase;
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  letter-spacing: 1rem;
+#header button {
+  background-color:#92a1d1;
 }
-
-.maand p {
-  font-size: 1.5rem;
+#container {
+  width: 770px;
 }
-
-.maand i {
-  font-size: 3rem;
-}
-
-.dagen {
+#weekdays {
   width: 100%;
-  height: 5rem;
-  padding: 0 0.5rem;
   display: flex;
-  align-items: center;
+  color: #247BA0;
 }
-
-.dagen div {
-  font-family: 'Ubuntu';
-  font-size: 1.5rem;
-  font-weight: 400;
-  letter-spacing: 0.5rem;
-  width: calc(100.2rem / 7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 0 0.3rem 0.5rem black;
+#weekdays div {
+  width: 100px;
+  padding: 10px;
+  
 }
-
-.dag {
+#calendar {
   width: 100%;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
 }
-
-.dag div {
-  font-size: 1.3rem;
-  margin: 0.3rem;
-  width: calc(93.8rem / 7);
-  height: 5rem;
+.day {
+  width: 100px;
+  padding: 10px;
+  height: 100px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: white;
+  margin: 5px;
+  box-shadow: 0px 0px 3px #CBD4C2;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 0 0.3rem 0.5rem black;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.day:hover {
+  background-color: #e8faed;
 }
 
-.vorigeDate, .volgendeDate{
-  opacity: 0.5;
+.day + #currentDay {
+  background-color:#50c878;
 }
-
-.vdg {
-  background-color: #50c878;
+.event {
+  font-size: 10px;
+  padding: 3px;
+  background-color: #addfad;
+  color: white;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
 }
-
-.dag div:hover:not(.vdg) {
-  background-color: #262626;
-  border: 0.2rem solid #777;
+.padding {
+  cursor: default !important;
+  background-color: #FFFCFF !important;
+  box-shadow: none !important;
+}
+#newEventModal, #deleteEventModal {
+  display: none;
+  z-index: 20;
+  padding: 25px;
+  background-color: #e8f4fa;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  width: 350px;
+  top: 100px;
+  left: calc(50% - 175px);
+  position: absolute;
+  font-family: sans-serif;
+}
+#eventTitleInput {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+}
+#eventTitleInput.error {
+  border: 2px solid red;
+}
+#cancelButton, #deleteButton {
+  background-color: #d36c6c;
+}
+#saveButton, #closeButton {
+  background-color: #92a1d1;
+}
+#eventText {
+  font-size: 14px;
+}
+#modalBackDrop {
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
 }
