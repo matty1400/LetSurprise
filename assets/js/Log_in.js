@@ -1,4 +1,3 @@
-
 var emailElement = document.getElementById("Email").value;
 var loginButtonElement = document.getElementById("Log-in_button");
 
@@ -16,7 +15,7 @@ function getUser(){
             sessionStorage.setItem("lastname",data[0].lastName);
             alert("success");
             
-            window.location.href = "http://localhost/index.html"
+            window.location.href = "http://localhost/indexloggedin.html"
         }    
     });
 };

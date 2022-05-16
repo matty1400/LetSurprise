@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Register</title>
         <link href="./assets/css/register.css" rel="stylesheet" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,12 +23,12 @@
             </h1>
 
             <form action="./assets/API/register_user.php" method="post">
-                <label for="firstname" id="first">
+                <label for="firstname" id="first" required>
                     Firstname
                 </label>
                 <br>
                 <br>
-                <input type="text" id="firstname" name="firstname" placeholder="Your firstname">
+                <input type="text" id="firstname" name="firstname" placeholder="Your firstname" required>
                 <br>
                 <br>
                 <label for="lastname" id="last">
@@ -36,7 +36,7 @@
                 </label>
                 <br>
                 <br>
-                <input type="text" id="lastname" name="lastname" placeholder="Your lastname">
+                <input type="text" id="lastname" name="lastname" placeholder="Your lastname" required>
                 <br>
                 <br>
                 <label for="Email" id="mail">
@@ -44,7 +44,7 @@
                 </label>
                 <br>
                 <br>
-                <input type="text" id="Email" name="Email" placeholder="E-mail">
+                <input type="text" id="Email" name="Email" placeholder="E-mail" required>
                 <br>
                 <br>
                 <label for="Password" id="pass">
@@ -52,14 +52,14 @@
                 </label>
                 <br>
                 <br>
-                <input type="text" id="Password" name="Password" placeholder="Password">
+                <input type="password" id="Password" name="Password" placeholder="Password" required>
                 <br>
                 <br>
-                <input type="submit" value="Register">
-                <a href="Log_in.html" >
-                    Register
+                <a href="Log_in.html">
+                    <input id="registerButton" type="submit" value="Register">
                 </a>
             </form>
+            <br>
         </div>
 
     </body>
