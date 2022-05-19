@@ -4,7 +4,8 @@
  $firstname = $_POST["firstname"];
  $lastname= $_POST["lastname"];
  $email = $_POST["Email"];
- $password = $_POST["Password"];
+ $passwordText = $_POST["Password"];
+ $password =  hash("sha256", $passwordText);
  
  procedure("call addPerson('$password','$email','$firstname','$lastname');");
 ?>
