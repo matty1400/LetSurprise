@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucky wheel</title>
-    <link href="./assets/css/luckywheel.css" rel="stylesheet" type="text/css">
+    <title>Wishlist</title>
+    <link href="./assets/css/wishlist.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,23 +28,49 @@
                 <div class="dropdown-content">
                     <a>Settings</a>
                     <a href="./wishlist.html">Wishlist</a>
-                    <a id="logoutButton" href="logout.html">Log-out</a>
+                    <a>Log-out</a>
                 </div>
             </div>
-            <img src="./assets/images/profile_icon.png" id="profileIcon" alt="Icon of profile">
+            <img src="./assets/images/profile_icon.png" id="profileIcon" alt="Icon of profile" href="user.html">            
         </div>
     </div>
 
-    <!-- LUCKY WHEEL IMAGES -->
-    <div class="lucky_wheel">
-        <img src="assets/images/luckywheel.png" id="wheel" alt="image of lucky wheel">
-        <img src="assets/images/buttonwheel.png" id="spinWheel" alt="button for the wheel">
-        <img src="assets/images/marker.png" id="markerWheel" alt="marker for the wheel">
-        <img src="assets/images/volgendekeerbeter.png" id="betterLuck" alt="volgende keer beter afbeelding">
+    <div class="wrapper">
+        <div class="search-user">
+            <input id="search" type="search" placeholder="Search for someone" aria-label="Look up a user">
+            <div class="autocom-box">
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+                <li>Test</li>
+            </div>
+        </div>
     </div>
 
-    <script src="./assets/js/wheel.js"></script>
+    <h1 id="myWishlist">
+        null
+    </h1>
+
+    <div class="wishlistBox">
+            <h4 id="wishlistList">
+            </h4>
+    </div>
+
+    <h1 id="myWishlist">
+        Possible Purchases
+    </h1>
+
+    <div class="Possible">
+        <h2 id="testing">
+        </h2>
+    </div>
+
+    <script src="./assets/js/otherusers.js"></script>
     <script src="./assets/js/test.js"></script>
-    <script src="./assets/js/logout.js"></script>
+    <script src="./assets/js/searchuser.js"></script>
+    <script src="./assets/js/suggestions.js"></script>
+    <script src="./assets/js/otherUser.js"></script>
 </body>
 </html>
