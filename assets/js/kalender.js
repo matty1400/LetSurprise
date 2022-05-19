@@ -108,8 +108,6 @@ function saveEvent() {
 
     lasteventNAME = lastevent["title"];
     lasteventDATE = lastevent["date"];
-    lasteventtesting = lasteventDATE.replace("/","-")
-    console.log(lasteventtesting)
 
     fetch("" + lasteventDATE + "&&title=" + lasteventNAME)
     .then(function (response){
