@@ -53,6 +53,7 @@
   width: 35px;
   color: #50c878;
   margin-left: 10px;
+  margin-right: 55px;
 }
 
 /* BUTTON STYLING */
@@ -93,7 +94,7 @@
   font-size: 20px;
   color: #007077;
   text-decoration: none;
-  margin-left: 50px;
+  margin-left: 65px;
 }
 
 #buttonSocials {
@@ -104,7 +105,7 @@
   font-size: 20px;
   color: #007077;
   text-decoration: none;
-  margin-left: 50px;
+  margin-left: 65px;
 }
 
 #buttonHelp {
@@ -115,7 +116,7 @@
   font-size: 20px;
   color: #007077;
   text-decoration: none;
-  margin-left: 50px;
+  margin-left: 65px;
 }
 
 #buttonWheel {
@@ -126,7 +127,8 @@
   font-size: 20px;
   color: #007077;
   text-decoration: none;
-  margin-left: 50px;
+  margin-left: 65px;
+  margin-right: 65px;
 }
 
 #dropdown {

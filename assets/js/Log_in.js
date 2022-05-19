@@ -20,7 +20,7 @@ function getUser(){
             window.location.href = "http://localhost/indexloggedin.html"
         }
         catch(err){
-            alert("wrong email or password")
+            alert("Wrong email or password")
         };
         
        

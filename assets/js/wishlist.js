@@ -1,6 +1,6 @@
-var inputWish = document.querySelector('#inputInterest')
-var submitButton = document.querySelector('#submitButton')
-var listWishes = document.querySelector('#wishlistList')
+var inputWish = document.querySelector('#inputInterest');
+var submitButton = document.querySelector('#submitButton');
+var listWishes = document.querySelector('#wishlistList');
 var listOfWishes = []
 
 submitButton.addEventListener('click', function() {
@@ -11,7 +11,7 @@ submitButton.addEventListener('click', function() {
 submitButton.addEventListener('click', function() { // NOG NIET GEFIXT MOET IK MAANDAG VRAGEN
     listWishes.innerHTML = ""
     for (const element of listOfWishes) {
-        if (element == '')
+        if (element == "")
         {
             alert("Invalid input")
         }

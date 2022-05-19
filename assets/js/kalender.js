@@ -100,14 +100,16 @@ function saveEvent() {
       title: eventTitleInput.value,
     });
 
-    localStorage.setItem('events', JSON.stringify(events));
+    localhost.setItem('events', JSON.stringify(events));
     
-    localGet = localStorage.getItem('events')
-    testing = JSON.parse(window.localStorage.getItem('events'))
+    localGet = localhost.getItem('events')
+    testing = JSON.parse(window.localhost.getItem('events'))
     lastevent = testing[testing.length-1];
 
     lasteventNAME = lastevent["title"];
     lasteventDATE = lastevent["date"];
+    lasteventtesting = lasteventDATE.replace("/","-")
+    console.log(lasteventtesting)
 
     fetch("" + lasteventDATE + "&&title=" + lasteventNAME)
     .then(function (response){
