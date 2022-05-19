@@ -247,7 +247,7 @@ button {
 #eventTitleInput.error {
   border: 2px solid red;
 }
-#cancelButton, #deleteButton {
+#cancelButton, #deleteButton, #addNewButton {
   background-color: #d36c6c;
 }
 #saveButton, #closeButton {
