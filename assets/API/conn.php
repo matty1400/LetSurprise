@@ -1,4 +1,5 @@
 <?php
+
     function makeDbConnection() {
         // Credentials om te connecteren met een database
             $hostname = "localhost"; //ID362590_IMS1.db.webhosting.be -- OP COMBELL
@@ -67,5 +68,6 @@
   
           return $result;
     }
+    
 ?>
   

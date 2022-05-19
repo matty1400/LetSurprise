@@ -108,8 +108,10 @@ function saveEvent() {
 
     lasteventNAME = lastevent["title"];
     lasteventDATE = lastevent["date"];
+    lasteventID = sessionStorage.getItem('userID');
+   
 
-    fetch("" + lasteventDATE + "&&title=" + lasteventNAME)
+    fetch("assets/API/insert_event.php?date=" + lasteventDATE + "&&title=" + lasteventNAME+ "&&userID=" + lasteventID)
     .then(function (response){
         return response.json();
     })
