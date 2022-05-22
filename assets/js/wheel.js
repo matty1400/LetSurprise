@@ -7,6 +7,7 @@
     startButton.addEventListener('click', () => {
         startButton.style.pointerEvents = 'none';
         deg = Math.floor(5000 + Math.random() * 7500)
+        
         wheel.style.transition = 'all 10s ease-out';
         wheel.style.transform = `rotate(${deg}deg)`;
     });
@@ -16,6 +17,24 @@
         startButton.style.pointerEvents = 'auto';
         wheel.style.transition = 'none';
         const actualDeg = deg % 360;
+        
+    
+        if (actualDeg >40&&actualDeg<45){
+            console.log("winner");
+            
+        }
+        if (actualDeg >225&&actualDeg<230){
+            console.log("winner");
+            
+        }
+        else{
+            console.log("loser");
+            
+            betterLuck.style.visibility = 'visible';
+            setTimeout(function(){
+                betterLuck.style.visibility = 'hidden';
+            }, 2000);
+        }
         wheel.style.transform = `rotate(${actualDeg}deg)`;
     });
     
