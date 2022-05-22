@@ -1,4 +1,3 @@
-console.log('linked');
 var updateButtonElement = document.getElementById("updateButton");
 
 updateButtonElement.addEventListener("click",function(){
@@ -14,7 +13,7 @@ function updateUser(oldC,newC){
 
     
    
-    fetch("assets/API/change_credentials.php?oldCredential="+oldC+"&&newCredential="+newC)
+    fetch("assets/API/change_password.php?oldCredential="+oldC+"&&newCredential="+newC)
     .then(function (response){
         return response.json();
     })

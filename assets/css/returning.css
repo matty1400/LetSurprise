@@ -24,3 +24,9 @@ body {
     justify-content: center;
     top: 200px;
   }
+
+#congratsgif {
+  display: flex;
+  justify-content: center;
+  margin-left: 588px;
+}
