@@ -9,6 +9,20 @@ const backDrop = document.getElementById('modalBackDrop');
 const eventTitleInput = document.getElementById('eventTitleInput');
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
+function load(){
+  var userID = sessionStorage.getItem('userID');
+  fetch("assets/API/getEventsback.php?userID=" + userID)
+    .then(function (response){
+        return response.json();
+    })
+    .then(function  (data){
+        console.log(data);
+            
+    });
+}
+load();
+
+
 function openModal(date) {
   clicked = date;
 
@@ -54,6 +68,7 @@ function load() {
   for(let i = 1; i <= paddingDays + daysInMonth; i++) {
     const daySquare = document.createElement('div');
     daySquare.classList.add('day');
+    daySquare.setAttribute("id","day" + i);
 
     const dayString = `${month + 1}/${i - paddingDays}/${year}`;
 
@@ -68,6 +83,7 @@ function load() {
       if (eventForDay) {
         const eventDiv = document.createElement('div');
         eventDiv.classList.add('event');
+        eventDiv.setAttribute("id","event" + i);
         eventDiv.innerText = eventForDay.title;
         daySquare.appendChild(eventDiv);
       }
@@ -109,7 +125,16 @@ function saveEvent() {
     lasteventNAME = lastevent["title"];
     lasteventDATE = lastevent["date"];
     lasteventID = sessionStorage.getItem('userID');
-   
+    
+    date1 = lasteventDATE.replace('/','-');
+    date2 = date1.replace('/','-');
+    //console.log(date2) // mm-dd-yyyy
+
+    const [month, day, year] = date2.split('-');
+
+    const result = [year, month, day].join('-');
+    //console.log(result); //yyyy-mm-dd
+    //console.log("assets/API/insert_event.php?date=" + result + "&&title=" + lasteventNAME+ "&&userID=" + lasteventID); //
 
     fetch("assets/API/insert_event.php?date=" + lasteventDATE + "&&title=" + lasteventNAME+ "&&userID=" + lasteventID)
     .then(function (response){
