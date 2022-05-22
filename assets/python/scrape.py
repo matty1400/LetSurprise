@@ -17,7 +17,7 @@ Firstimg = productimg[0]
 
 for link in Firstimg('img'):
     productimageURL = link.get('src')
-# print(productimageURL)
+print(productimageURL)
 
 # product Naam
 productName = productBS.find_all("div", {"class": "product-title--inline"})
@@ -27,4 +27,4 @@ productNameTxt = productName[0].text
 productprijs = productBS.find_all("span", {"class": "promo-price"})
 productpr = productprijs[0].text.strip()
 pijstje = productpr.replace("  -", "")
-# print(pijstje)
+print(pijstje)
