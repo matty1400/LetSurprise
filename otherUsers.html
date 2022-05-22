@@ -17,7 +17,9 @@
         <a href="indexloggedin.html">
             <img src="./assets/images/Logo_LetSurprise2.png" id="logo" alt="Logo">
         </a>
-        <span id="userName"></span>
+        <div class="logged_in_as_area">
+            <span id="userName"></span>
+        </div>
         <div class="buttons">
             <a href="kalender.html" id="buttonKalender">Kalender</a>
             <a href="socials.html" id="buttonSocials">Socials</a>
@@ -26,9 +28,9 @@
             <div class="dropdown-menu">
                 <img src="./assets/images/dropdown.png" id="dropdown" alt="Dropdown triangle">
                 <div class="dropdown-content">
-                    <a>Settings</a>
+                    <a href="./settings.html">Settings</a>
                     <a href="./wishlist.html">Wishlist</a>
-                    <a>Log-out</a>
+                    <a id="logoutButton" href="logout.html">Log-out</a>
                 </div>
             </div>
             <img src="./assets/images/profile_icon.png" id="profileIcon" alt="Icon of profile" href="user.html">            
@@ -67,10 +69,11 @@
         </h2>
     </div>
 
-    <script src="./assets/js/otherusers.js"></script>
+    <script src="./assets/js/otherUser.js"></script>
     <script src="./assets/js/test.js"></script>
     <script src="./assets/js/searchuser.js"></script>
     <script src="./assets/js/suggestions.js"></script>
     <script src="./assets/js/otherUser.js"></script>
+    <script src="./assets/js/logout.js"></script>
 </body>
 </html>

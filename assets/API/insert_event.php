@@ -7,3 +7,4 @@ $userID = $_GET["userID"];
 
 $addEvent = procedure("call addEvent('$date', '$title',$userID);");
 echo json_encode($addEvent);
+?>

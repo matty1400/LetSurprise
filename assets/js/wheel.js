@@ -2,6 +2,7 @@
     const wheel = document.querySelector('#wheel')
     const startButton = document.querySelector('#spinWheel')
     const betterLuck = document.querySelector('#betterLuck')
+    const winner = document.querySelector('#winner')
     let deg = 0;
 
     startButton.addEventListener('click', () => {
@@ -21,10 +22,18 @@
     
         if (actualDeg >40&&actualDeg<45){
             console.log("winner");
+            winner.style.visibility = 'visible';
+            setTimeout(function(){
+                winner.style.visibility = 'hidden';
+            }, 2000);
             
         }
         if (actualDeg >225&&actualDeg<230){
             console.log("winner");
+            winner.style.visibility = 'visible';
+            setTimeout(function(){
+                winner.style.visibility = 'hidden';
+            }, 2000);
             
         }
         else{

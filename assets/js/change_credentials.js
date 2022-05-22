@@ -2,18 +2,11 @@ console.log('linked');
 var updateButtonElement = document.getElementById("updateButton");
 
 updateButtonElement.addEventListener("click",function(){
-
     var oldCredentialElement = document.getElementById("oldCredential").value;
     var newCredentialElement = document.getElementById("newCredential").value;
-   
-   
-    updateUser(oldCredentialElement,newCredentialElement);
-   
-    
-   
 
-    
-    
+
+    updateUser(oldCredentialElement,newCredentialElement);
 });
 
 function updateUser(oldC,newC){
@@ -30,5 +23,3 @@ function updateUser(oldC,newC){
          console.log(data[0]);
     });
 };
-
-

@@ -17,7 +17,9 @@
         <a href="indexloggedin.html">
             <img src="./assets/images/Logo_LetSurprise2.png" id="logo" alt="Logo">
         </a>
-        <span id="userName"></span>
+        <div class="logged_in_as_area">
+            <span id="userName"></span>
+        </div>
         <div class="buttons">
             <a href="kalender.html" id="buttonKalender">Kalender</a>
             <a href="socials.html" id="buttonSocials">Socials</a>
@@ -26,7 +28,7 @@
             <div class="dropdown-menu">
                 <img src="./assets/images/dropdown.png" id="dropdown" alt="Dropdown triangle">
                 <div class="dropdown-content">
-                    <a>Settings</a>
+                    <a href="./settings.html">Settings</a>
                     <a href="./wishlist.html">Wishlist</a>
                     <a id="logoutButton" href="logout.html">Log-out</a>
                 </div>
@@ -41,6 +43,16 @@
         <img src="assets/images/buttonwheel.png" id="spinWheel" alt="button for the wheel">
         <img src="assets/images/marker.png" id="markerWheel" alt="marker for the wheel">
         <img src="assets/images/volgendekeerbeter.png" id="betterLuck" alt="volgende keer beter afbeelding">
+        <img src="assets/images/winner.png" id="winner" alt="winner afbeelding">
+    </div>
+    
+    <div class="amountOfSpins">
+        <h2 id="spinsleft">
+            Spins left:
+        </h2>
+        <h2 id="numberofspins">
+            null
+        </h2>
     </div>
 
     <script src="./assets/js/wheel.js"></script>

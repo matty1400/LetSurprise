@@ -32,6 +32,19 @@ function select(element){
     let selectedUserData = element.textContent;
     inputBox.value = selectedUserData;
     sessionStorage.setItem("nameofuser", selectedUserData);
+    
+    var split = selectedUserData.split(" ");
+    
+    var lastnameAppend = "";
+
+    var restofname = split.splice(1);
+    for (let i = 0; i < restofname.length; i++)
+    {
+        lastnameAppend += restofname[i] + " ";
+    }
+
+    sessionStorage.setItem("selecteduserLast", lastnameAppend);
+    sessionStorage.setItem("selecteduserFirst", split[0]);
     location.href = "otherUsers.html";
 }
 

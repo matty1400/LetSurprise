@@ -85,6 +85,13 @@ body {
     height: 120px;
     width: 171px;
   }
+
+  .logged_in_as_area {
+    position: absolute;
+    font-family: 'Ubuntu';
+    margin-left: 1325px;
+    margin-top: 5px;
+  }
   
   #profileIcon {
     display: inline-block;
