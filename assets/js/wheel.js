@@ -1,3 +1,22 @@
+
+function onload(){
+    var userID = sessionStorage.getItem("userID")
+
+    fetch("assets/API/get_user_tokens.php?userID="+userID)
+.then(function (response){
+    return response.json();
+})
+.then(function  (data){
+    sessionStorage.setItem('remainingTokens',data[0].user_tokens)
+    
+    
+});
+
+};
+
+onload();
+
+
 (function() {
     const wheel = document.querySelector('#wheel')
     const startButton = document.querySelector('#spinWheel')
@@ -5,6 +24,17 @@
     let deg = 0;
 
     startButton.addEventListener('click', () => {
+        var userID = sessionStorage.getItem("userID")
+
+            fetch("assets/API/spin_token.php?userID="+userID)
+        .then(function (response){
+            return response.json();
+        })
+        .then(function  (data){
+            
+            
+        });
+
         startButton.style.pointerEvents = 'none';
         deg = Math.floor(5000 + Math.random() * 7500)
         
