@@ -51,10 +51,6 @@ numberofspins.innerHTML = tokens;
         
         wheel.style.transition = 'all 10s ease-out';
         wheel.style.transform = `rotate(${deg}deg)`;
-
-        
-        onload();
-        
     });
 
     
@@ -89,7 +85,9 @@ numberofspins.innerHTML = tokens;
 
         onload();
 
-        var tokens = sessionStorage.getItem("remainingTokens");
-        numberofspins.innerHTML = tokens;
+        setTimeout(function(){
+            var tokens = sessionStorage.getItem("remainingTokens");
+            numberofspins.innerHTML = tokens;
+        }, 1000);
     });
 })();

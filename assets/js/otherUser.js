@@ -34,5 +34,6 @@ function OnLoad()
         }
     });
 }
-
-OnLoad();
+setTimeout(function(){
+    OnLoad();
+}, 100);
