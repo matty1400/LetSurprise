@@ -5,7 +5,7 @@ import requests
 import json
 import mysql.connector
 import string
-from nltk.tokenize import word_tokenize
+
 import numpy as np
 
 
