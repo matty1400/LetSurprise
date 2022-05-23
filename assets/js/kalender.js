@@ -1,6 +1,6 @@
 let nav = 0;
 let clicked = null;
-let events = localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : [];
+let events = [];
 
 const calendar = document.getElementById('calendar');
 const newEventModal = document.getElementById('newEventModal');
@@ -11,6 +11,7 @@ const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Frida
 
 function load(){
   var userID = sessionStorage.getItem('userID');
+  console.log("events loaded");
   fetch("assets/API/getEventsback.php?userID=" + userID)
     .then(function (response){
         return response.json();

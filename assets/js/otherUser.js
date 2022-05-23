@@ -20,6 +20,8 @@ function GetID()
 
 GetID();
 
+var wishesOther = [];
+
 function OnLoad()
 {
     userID = sessionStorage.getItem("ID_of_SelectedUser");
@@ -30,6 +32,7 @@ function OnLoad()
     .then(function  (data){
         console.log(data);
         for (let x = 0; x <= data.length; x++) {
+            wishesOther.push(data[x].productName);
             wishlistList.innerHTML += data[x].productName + " - ";
         }
     });
@@ -37,3 +40,4 @@ function OnLoad()
 setTimeout(function(){
     OnLoad();
 }, 100);
+
