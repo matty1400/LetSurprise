@@ -22,8 +22,10 @@ function onload(){
 };
 onload();
 
-var tokens = sessionStorage.getItem("remainingTokens");
-numberofspins.innerHTML = tokens;
+setTimeout(function(){
+    var tokens = sessionStorage.getItem("remainingTokens");
+    numberofspins.innerHTML = tokens;
+}, 100);
 
 
 
