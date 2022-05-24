@@ -1,6 +1,7 @@
 let nav = 0;
 let clicked = null;
-let events = localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : [];
+let events = []
+// let events = localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : [];
 
 const calendar = document.getElementById('calendar');
 const newEventModal = document.getElementById('newEventModal');
@@ -9,18 +10,7 @@ const backDrop = document.getElementById('modalBackDrop');
 const eventTitleInput = document.getElementById('eventTitleInput');
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-function load(){
-  var userID = sessionStorage.getItem('userID');
-  fetch("assets/API/getEventsback.php?userID=" + userID)
-    .then(function (response){
-        return response.json();
-    })
-    .then(function  (data){
-        console.log(data);
-            
-    });
-}
-load();
+
 
 
 function openModal(date) {
@@ -68,34 +58,45 @@ function load() {
   for(let i = 1; i <= paddingDays + daysInMonth; i++) {
     const daySquare = document.createElement('div');
     daySquare.classList.add('day');
-    daySquare.setAttribute("id","day" + i);
+    // daySquare.setAttribute("id","day" + i);
 
     const dayString = `${month + 1}/${i - paddingDays}/${year}`;
-
+    // mm/dd/yyyy
+    var maand  = month + 1;
+    var dag  = i - paddingDays
+    datum = maand + "/" + dag + "/" + year;
     if (i > paddingDays) {
       daySquare.innerText = i - paddingDays;
+      daySquare.dataset.datum = (datum)
       const eventForDay = events.find(e => e.date === dayString);
 
       if (i - paddingDays === day && nav === 0) {
         daySquare.id = 'currentDay';
+        daySquare.dataset.datum = (datum)
       }
 
-      if (eventForDay) {
-        const eventDiv = document.createElement('div');
-        eventDiv.classList.add('event');
-        eventDiv.setAttribute("id","event" + i);
-        eventDiv.innerText = eventForDay.title;
-        daySquare.appendChild(eventDiv);
-      }
-
+      // if (eventForDay) {
+      //   const eventDiv = document.createElement('div');
+      //   eventDiv.classList.add('event');
+      //   eventDiv.dataset.datum = (datum);
+      //   eventDiv.innerText = "IETS"; // HIER KOMT EVENT NAAM
+      //   daySquare.appendChild(eventDiv);
+        
+      // }
+      
       daySquare.addEventListener('click', () => openModal(dayString));
     } else {
       daySquare.classList.add('padding');
     }
 
-    calendar.appendChild(daySquare);    
+    calendar.appendChild(daySquare);
+
+    
   }
+  
 }
+// console.log(daySquare.dataset.datum)
+
 
 function closeModal() {
   eventTitleInput.classList.remove('error');
@@ -160,12 +161,51 @@ function deleteEvent() {
 function initButtons() {
   document.getElementById('nextButton').addEventListener('click', () => {
     nav++;
+    
     load();
+    var userID = sessionStorage.getItem('userID');
+          fetch("assets/API/get_events.php?userID=" + userID)
+          .then(function (response){
+            return response.json();
+          })
+          .then(function  (data){
+            console.log(data);
+            var daystesting = document.querySelectorAll(".day");
+            
+            for (var i = 0; i < data.length ; i++){
+              for (var j = 0; j < daystesting.length ; j++){
+                if (daystesting[j].dataset.datum == data[i].event_date){
+                  daystesting[j].innerHTML += "<br>" + "<br>" + data[i].event_name;
+                }
+              }
+                
+            }
+            
+        });
   });
 
   document.getElementById('backButton').addEventListener('click', () => {
     nav--;
     load();
+    var userID = sessionStorage.getItem('userID');
+          fetch("assets/API/get_events.php?userID=" + userID)
+          .then(function (response){
+            return response.json();
+          })
+          .then(function  (data){
+            console.log(data);
+            var daystesting = document.querySelectorAll(".day");
+            
+            for (var i = 0; i < data.length ; i++){
+              for (var j = 0; j < daystesting.length ; j++){
+                if (daystesting[j].dataset.datum == data[i].event_date){
+                  daystesting[j].innerHTML += "<br>" + "<br>" + data[i].event_name;
+                }
+              }
+                
+            }
+            
+        });
   });
 
   document.getElementById('saveButton').addEventListener('click', saveEvent);
@@ -176,3 +216,28 @@ function initButtons() {
 
 initButtons();
 load();
+
+// var daystesting = document.querySelectorAll(".day");
+// for (var i = 0; i < daystesting.length; i++)
+//   for
+//   console.log(daystesting[i].dataset.datum);
+
+var userID = sessionStorage.getItem('userID');
+          fetch("assets/API/get_events.php?userID=" + userID)
+          .then(function (response){
+            return response.json();
+          })
+          .then(function  (data){
+            console.log(data);
+            var daystesting = document.querySelectorAll(".day");
+            
+            for (var i = 0; i < data.length ; i++){
+              for (var j = 0; j < daystesting.length ; j++){
+                if (daystesting[j].dataset.datum == data[i].event_date){
+                  daystesting[j].innerHTML += "<br>" + "<br>" + data[i].event_name;
+                }
+              }
+                
+            }
+            
+        });
