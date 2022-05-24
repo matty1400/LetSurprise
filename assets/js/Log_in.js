@@ -31,7 +31,5 @@ function getUser(){
 };
 
 loginButtonElement.addEventListener("click",function(){
-    
-
     getUser();
 });
