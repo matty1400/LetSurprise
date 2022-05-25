@@ -71,6 +71,26 @@ body {
   text-decoration: none;
 }
 
+#testing {
+  font-family: 'Ubuntu';
+}
+
+#buttonToProduct {
+  background-color:  #aaf0d1;
+  font-family: 'Ubuntu';
+  font-size: 20px;
+  color: #007077;
+  text-decoration: none;
+}
+
+#buttonToProduct:hover {
+  opacity: 0.7;
+}
+
+#productPrice {
+  color: red;
+}
+
   
   /* HEADER BOX STYLING */
   .headerBox {
