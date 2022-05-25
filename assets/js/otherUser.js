@@ -63,93 +63,73 @@ setTimeout(function(){
     
     if(pulledWishes.length>3){
         while(selectedIndexes.length<3){
-
-        
-    
-            
-    
-    
             x = getRandomIntInclusive(0,pulledWishes.length-1);
             
-    
             if (selectedIndexes.includes(x)){
-                
-    
             }
             else{
                 selectedIndexes.push(x)
-    
             }
-        
-            
-    
-    
         };
-        console.log(selectedIndexes)
+
         for(var y in selectedIndexes){
-    
-            
-    
+
             fetch("assets/API/pull_suggested.php?wish="+ pulledWishes[selectedIndexes[y]])
-        .then(function (response){
-            return response.json();
-        })
-        .then(function  (data){
-            var product = document.createElement("div");
-            product.id = "productName";
-            product.innerHTML += data[0].nameItem+'<br>' + '<br>';
-            var price = document.createElement("div");
-            price.id = "productPrice";
-            price.innerHTML += "€" + data[0].price + '<br>' + '<br>';
-            var image = document.createElement("img");
-            image.src = data[0].img_url;
-            var link = document.createElement("a");
-            link.id = "buttonToProduct";
-            link.target = "_blank";
-            link.href += "https://www.bol.com/be/nl/s/?searchtext="+ data[0].searchName;
-            link.innerHTML += '<br>' + '<br>'+ "Buy it now" + '<br>' + '<br>' + '<br>';
-    
-            document.querySelector("#testing").appendChild(product);
-            document.querySelector("#testing").appendChild(price);
-            document.querySelector("#testing").appendChild(image);
-            document.querySelector("#testing").appendChild(link);
-            
-        });
-        };
-    };
+            .then(function (response){
+                return response.json();
+            })
+            .then(function  (data){
+                var product = document.createElement("div");
+                product.id = "productName";
+                product.innerHTML += data[0].nameItem+'<br>' + '<br>';
+                var price = document.createElement("div");
+                price.id = "productPrice";
+                price.innerHTML += "€" + data[0].price + '<br>' + '<br>';
+                var image = document.createElement("img");
+                image.src = data[0].img_url;
+                var link = document.createElement("a");
+                link.id = "buttonToProduct";
+                link.target = "_blank";
+                link.href += "https://www.bol.com/be/nl/s/?searchtext="+ data[0].searchName;
+                link.innerHTML += '<br>' + '<br>'+ "Buy it now" + '<br>' + '<br>' + '<br>';
+        
+                document.querySelector("#testing").appendChild(product);
+                document.querySelector("#testing").appendChild(price);
+                document.querySelector("#testing").appendChild(image);
+                document.querySelector("#testing").appendChild(link);
+                
+            });
+        }
+    }
     if(pulledWishes.length<=3){
         for(var x in pulledWishes){
-    
-    
-        
-            
         
             fetch("assets/API/pull_suggested.php?wish="+ pulledWishes[x])
-        .then(function (response){
-            return response.json();
-        })
-        .then(function  (data){
-            var product = document.createElement("div");
-            product.id = "productName";
-            product.innerHTML += data[0].nameItem+'<br>' + '<br>';
-            var price = document.createElement("div");
-            price.id = "productPrice";
-            price.innerHTML += "€" + data[0].price + '<br>' + '<br>';
-            var image = document.createElement("img");
-            image.src = data[0].img_url;
-            var link = document.createElement("a");
-            link.id = "buttonToProduct";
-            link.target = "_blank";
-            link.href += "https://www.bol.com/be/nl/s/?searchtext="+ data[0].searchName;
-            link.innerHTML += '<br>' + '<br>'+ "Buy it now" + '<br>' + '<br>' + '<br>';
-    
-            document.querySelector("#testing").appendChild(product);
-            document.querySelector("#testing").appendChild(price);
-            document.querySelector("#testing").appendChild(image);
-            document.querySelector("#testing").appendChild(link);
-            
-        });
-        };
+            .then(function (response){
+                return response.json();
+            })
+            .then(function  (data){
+                var product = document.createElement("div");
+                product.id = "productName";
+                product.innerHTML += data[0].nameItem+'<br>' + '<br>';
+                var price = document.createElement("div");
+                price.id = "productPrice";
+                price.innerHTML += "€" + data[0].price + '<br>' + '<br>';
+                var image = document.createElement("img");
+                image.src = data[0].img_url;
+                var link = document.createElement("a");
+                link.id = "buttonToProduct";
+                link.target = "_blank";
+                link.href += "https://www.bol.com/be/nl/s/?searchtext="+ data[0].searchName;
+                link.innerHTML += '<br>' + '<br>'+ "Buy it now" + '<br>' + '<br>' + '<br>';
+        
+                document.querySelector("#testing").appendChild(product);
+                document.querySelector("#testing").appendChild(price);
+                document.querySelector("#testing").appendChild(image);
+                document.querySelector("#testing").appendChild(link);
+                
+            });
+        }
     
     }  
 },200);

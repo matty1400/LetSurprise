@@ -274,6 +274,18 @@ button {
   background-color: rgba(0,0,0,0.8);
 }
 
-#deletebutton{
+#deletebutton {
   background-color:#92a1d1;
+  position: absolute;
+  top: 210px;
+  right: 140px;
+}
+
+#searchevents {
+  border: 5px solid #92a1d1;
+  font-family: 'Ubuntu';
+  position: absolute;
+  top: 170px;
+  right: 30px;
+  font-size: 20px;
 }

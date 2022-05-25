@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./assets/css/adminpanel.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>    
+    <h1 id="title">
+        Admin panel
+    </h1>
+
+    <h2 id="title2">
+        Users in database:
+    </h2>
+
+    <br>
+
+    <h4 id="title3">
+        ID // Full name - E-mail
+    </h4>
+
+    <br>
+
+    <h4 id="listOfUsers">
+    </h4>
+
+    <div class="removeUser">
+        <input type="number" id="inputID" placeholder="Fill in ID of user">
+        <br>
+        <br>
+        <a href="removedUser.html" id="buttonRemove">Remove user</a>
+    </div>
+
+    <script src="./assets/js/adminpanel.js"></script>
+    <script src="./assets/js/checkstorageAdmin.js"></script>
+</body>
+</html>

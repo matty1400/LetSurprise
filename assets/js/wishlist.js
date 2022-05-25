@@ -26,7 +26,7 @@ submitButton.addEventListener('click', function() {
 
 });
 
-submitButton.addEventListener('click', function() { // NOG NIET GEFIXT MOET IK MAANDAG VRAGEN
+submitButton.addEventListener('click', function() {
     listWishes.innerHTML = ""
     for (const element of listOfWishes) {
         if (element != "")

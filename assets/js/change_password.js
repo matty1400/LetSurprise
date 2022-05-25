@@ -8,17 +8,11 @@ updateButtonElement.addEventListener("click",function(){
     updateUser(oldCredentialElement,newCredentialElement);
 });
 
-function updateUser(oldC,newC){
-    console.log(oldC);
-
-    
-   
-    fetch("assets/API/change_password.php?oldCredential="+oldC+"&&newCredential="+newC)
+function updateUser(oldC, newC){
+    fetch("assets/API/change_password.php?oldCredential=" + oldC + "&&newCredential=" + newC)
     .then(function (response){
         return response.json();
     })
     .then(function  (data){
-        
-         console.log(data[0]);
     });
 };

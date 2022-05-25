@@ -2,10 +2,10 @@
 
     function makeDbConnection() {
         // Credentials om te connecteren met een database
-            $hostname = "localhost"; //ID362590_IMS1.db.webhosting.be -- OP COMBELL
-            $user = "root"; //ID362590_IMS1 -- OP COMBELL
-            $password = "root"; //combellpassword
-            $database = "letsurprise"; //ID362590_IMS1
+            $hostname = "ID362590_letsurprise.db.webhosting.be"; //ID362590_IMS1.db.webhosting.be -- OP COMBELL
+            $user = "ID362590_letsurprise"; //ID362590_IMS1 -- OP COMBELL
+            $password = "prijstjelala123"; //combellpassword
+            $database = "ID362590_letsurprise"; //ID362590_IMS1
             
         // Make the connection
         $conn = mysqli_connect($hostname, $user, $password, $database);

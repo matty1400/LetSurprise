@@ -10,30 +10,28 @@ const eventTitleInput = document.getElementById('eventTitleInput');
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 var userID = sessionStorage.getItem('userID');
-          fetch("assets/API/get_events.php?userID=" + userID)
-          .then(function (response){
-            return response.json();
-          })
-          .then(function  (data){
-            var daystesting = document.querySelectorAll(".day");
-            
-            for (var i = 0; i < data.length ; i++){
-              for (var j = 0; j < daystesting.length ; j++){
-                if (daystesting[j].dataset.datum == data[i].event_date){
-                  // daystesting[j].innerHTML += "<br>" + "<br>" + data[i].event_name;
-                  const eventDiv = document.createElement('div');
-                  eventDiv.classList.add('event');
-                  // eventDiv.setAttribute("id","event" + i);
-                  eventDiv.innerText = data[i].event_name;
-                  daystesting[j].appendChild(eventDiv);
-                  events.push(data[i].event_date);
-                  console.log(events)
-                }
-              }
-                
-            }
-            document.getElementById('deleteButton').addEventListener('click', deleteEvent);
-        });
+
+fetch("assets/API/get_events.php?userID=" + userID)
+.then(function (response){
+  return response.json();
+})
+.then(function  (data){
+  var daystesting = document.querySelectorAll(".day");
+  
+  for (var i = 0; i < data.length ; i++){
+    for (var j = 0; j < daystesting.length ; j++){
+      if (daystesting[j].dataset.datum == data[i].event_date){
+        const eventDiv = document.createElement('div');
+        eventDiv.classList.add('event');
+        eventDiv.innerText = data[i].event_name;
+        daystesting[j].appendChild(eventDiv);
+        events.push(data[i].event_date);
+      }
+    }
+      
+  }
+  document.getElementById('deleteButton').addEventListener('click', deleteEvent);
+});
 
 function openModal(date) {
   clicked = date;
@@ -192,14 +190,11 @@ function initButtons() {
       for (var i = 0; i < data.length ; i++){
         for (var j = 0; j < daystesting.length ; j++){
           if (daystesting[j].dataset.datum == data[i].event_date){
-            // daystesting[j].innerHTML += "<br>" + "<br>" + data[i].event_name;
             const eventDiv = document.createElement('div');
             eventDiv.classList.add('event');
-            // eventDiv.setAttribute("id","event" + i);
             eventDiv.innerText = data[i].event_name;
             daystesting[j].appendChild(eventDiv);
             events.push(data[i].event_date);
-            console.log(events)
           }
         }
           
@@ -222,14 +217,11 @@ function initButtons() {
             for (var i = 0; i < data.length ; i++){
               for (var j = 0; j < daystesting.length ; j++){
                 if (daystesting[j].dataset.datum == data[i].event_date){
-                  // daystesting[j].innerHTML += "<br>" + "<br>" + data[i].event_name;
                   const eventDiv = document.createElement('div');
                   eventDiv.classList.add('event');
-                  // eventDiv.setAttribute("id","event" + i);
                   eventDiv.innerText = data[i].event_name;
                   daystesting[j].appendChild(eventDiv);
                   events.push(data[i].event_date);
-                  console.log(events)
                 }
               }
                 
