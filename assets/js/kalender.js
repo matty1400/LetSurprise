@@ -37,11 +37,8 @@ var userID = sessionStorage.getItem('userID');
 
 function openModal(date) {
   clicked = date;
-  const eventForDay = events.find(e => e === clicked);
-  for (var x = 0; x < events.length; x++) {
-    
-    
-  }
+  const eventForDay = events.find(e => e.date === clicked);
+
 
 
   if (eventForDay) {
