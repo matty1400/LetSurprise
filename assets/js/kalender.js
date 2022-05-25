@@ -37,7 +37,7 @@ var userID = sessionStorage.getItem('userID');
 
 function openModal(date) {
   clicked = date;
-  const eventForDay = events.find(e => e.date === clicked);
+  const eventForDay = events.find(e => e.date == clicked);
 
 
 
@@ -126,6 +126,7 @@ function closeModal() {
   eventTitleInput.value = '';
   clicked = null;
   load();
+  window.location.reload(true);
 }
 
 function saveEvent() {
@@ -188,14 +189,21 @@ function initButtons() {
     .then(function  (data){
       var daystesting = document.querySelectorAll(".day");
       
-            for (var i = 0; i < data.length ; i++){
-              for (var j = 0; j < daystesting.length ; j++){
-                if (daystesting[j].dataset.datum == data[i].event_date){
-                  daystesting[j].innerHTML += "<br>" + "<br>" + data[i].event_name;
-                }
-              }
-                
-            }
+      for (var i = 0; i < data.length ; i++){
+        for (var j = 0; j < daystesting.length ; j++){
+          if (daystesting[j].dataset.datum == data[i].event_date){
+            // daystesting[j].innerHTML += "<br>" + "<br>" + data[i].event_name;
+            const eventDiv = document.createElement('div');
+            eventDiv.classList.add('event');
+            // eventDiv.setAttribute("id","event" + i);
+            eventDiv.innerText = data[i].event_name;
+            daystesting[j].appendChild(eventDiv);
+            events.push(data[i].event_date);
+            console.log(events)
+          }
+        }
+          
+      }
             
         });
   });
@@ -214,7 +222,14 @@ function initButtons() {
             for (var i = 0; i < data.length ; i++){
               for (var j = 0; j < daystesting.length ; j++){
                 if (daystesting[j].dataset.datum == data[i].event_date){
-                  daystesting[j].innerHTML += "<br>" + "<br>" + data[i].event_name;
+                  // daystesting[j].innerHTML += "<br>" + "<br>" + data[i].event_name;
+                  const eventDiv = document.createElement('div');
+                  eventDiv.classList.add('event');
+                  // eventDiv.setAttribute("id","event" + i);
+                  eventDiv.innerText = data[i].event_name;
+                  daystesting[j].appendChild(eventDiv);
+                  events.push(data[i].event_date);
+                  console.log(events)
                 }
               }
                 
@@ -233,38 +248,20 @@ initButtons();
 load();
 
 
-// var userID = sessionStorage.getItem('userID');
-//           fetch("assets/API/get_events.php?userID=" + userID)
-//           .then(function (response){
-//             return response.json();
-//           })
-//           .then(function  (data){
-//             var daystesting = document.querySelectorAll(".day");
-            
-//             for (var i = 0; i < data.length ; i++){
-//               for (var j = 0; j < daystesting.length ; j++){
-//                 if (daystesting[j].dataset.datum == data[i].event_date){
-//                   // daystesting[j].innerHTML += "<br>" + "<br>" + data[i].event_name;
-//                   const eventDiv = document.createElement('div');
-//                   eventDiv.classList.add('event');
-//                   // eventDiv.setAttribute("id","event" + i);
-//                   eventDiv.innerText = data[i].event_name;
-//                   daystesting[j].appendChild(eventDiv);
-//                   events.push(daystesting[j]);
-//                 }
-//               }
-                
-//             }
-//             document.getElementById('deleteButton').addEventListener('click', deleteEvent);
-//         });
+var deletebuttonNEW = document.getElementById('deletebutton');
+var userID = sessionStorage.getItem('userID');
+  
 
-// function deleteEvent() {
-//   events = events.filter(e => e.date !== clicked);
-//   // localStorage.setItem('events', JSON.stringify(events));
-//   var daystesting = document.querySelectorAll(".day");
-//   console.log(daystesting)
-          
-          
-//   closeModal();
-// }
-// deleteEvent();
+deletebuttonNEW.addEventListener('click', function(){
+  var deleteEventNEW = document.getElementById('searchevents').value;
+  fetch("assets/API/delete_event.php?userID=" + userID + "&&eventName=" + deleteEventNEW)
+  .then(function (response){
+    return response.json();
+  })
+  .then(function  (data){
+    
+    
+  })
+
+  window.location.reload(true);
+});
