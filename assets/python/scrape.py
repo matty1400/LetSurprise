@@ -13,10 +13,10 @@ wishing = []
 
 # item krijgen
 try:
-    connection = mysql.connector.connect(host='localhost',
-                                         database='letsurprise',
-                                         user='root',
-                                         password='root')
+    connection = mysql.connector.connect(host='ID362590_letsurprise.db.webhosting.be',
+                                         database='ID362590_letsurprise',
+                                         user='ID362590_letsurprise',
+                                         password='prijstjelala123')
 
     sql_select_Query = "select productName from products"
     cursor = connection.cursor()
