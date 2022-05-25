@@ -38,12 +38,15 @@
   </div>
 
     <!-- KALENDER -->
+    <div>
+      <div class="Delete-event">
+        <input id="searchevents" type="search" placeholder="event name to delete">
+        <button id="deletebutton">Delete</button>
+    </div>
     <div id="container">
         <div id="header">
           <div id="monthDisplay"></div>
-          <div>
-            <button id="NRbol" onclick="window.open('https://www.bol.com/be/nl/','_blank')">Bol.com</button>
-          </div>
+          
           <div>
             <button id="backButton">Previous</button>
             <button id="nextButton">Next</button>
@@ -84,7 +87,8 @@
       <div id="modalBackDrop"></div>
     </div>
 
-    <script src="./assets/js/checkstorage.js"></script>
+    
+
     <script src="./assets/js/kalender.js"></script>
     <script src="./assets/js/test.js"></script>
     <script src="./assets/js/logout.js"></script>

@@ -1,6 +1,6 @@
 let nav = 0;
 let clicked = null;
-let events = [];
+let events = []
 
 const calendar = document.getElementById('calendar');
 const newEventModal = document.getElementById('newEventModal');
@@ -9,25 +9,37 @@ const backDrop = document.getElementById('modalBackDrop');
 const eventTitleInput = document.getElementById('eventTitleInput');
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-function load(){
-  var userID = sessionStorage.getItem('userID');
-  console.log("events loaded");
-  fetch("assets/API/getEventsback.php?userID=" + userID)
-    .then(function (response){
-        return response.json();
-    })
-    .then(function  (data){
-        console.log(data);
+var userID = sessionStorage.getItem('userID');
+          fetch("assets/API/get_events.php?userID=" + userID)
+          .then(function (response){
+            return response.json();
+          })
+          .then(function  (data){
+            var daystesting = document.querySelectorAll(".day");
             
-    });
-}
-load();
-
+            for (var i = 0; i < data.length ; i++){
+              for (var j = 0; j < daystesting.length ; j++){
+                if (daystesting[j].dataset.datum == data[i].event_date){
+                  // daystesting[j].innerHTML += "<br>" + "<br>" + data[i].event_name;
+                  const eventDiv = document.createElement('div');
+                  eventDiv.classList.add('event');
+                  // eventDiv.setAttribute("id","event" + i);
+                  eventDiv.innerText = data[i].event_name;
+                  daystesting[j].appendChild(eventDiv);
+                  events.push(data[i].event_date);
+                  console.log(events)
+                }
+              }
+                
+            }
+            document.getElementById('deleteButton').addEventListener('click', deleteEvent);
+        });
 
 function openModal(date) {
   clicked = date;
+  const eventForDay = events.find(e => e.date == clicked);
 
-  const eventForDay = events.find(e => e.date === clicked);
+
 
   if (eventForDay) {
     document.getElementById('eventText').innerText = eventForDay.title;
@@ -69,18 +81,22 @@ function load() {
   for(let i = 1; i <= paddingDays + daysInMonth; i++) {
     const daySquare = document.createElement('div');
     daySquare.classList.add('day');
-    daySquare.setAttribute("id","day" + i);
 
     const dayString = `${month + 1}/${i - paddingDays}/${year}`;
 
+    var maand  = month + 1;
+    var dag  = i - paddingDays
+    datum = maand + "/" + dag + "/" + year;
     if (i > paddingDays) {
       daySquare.innerText = i - paddingDays;
+      daySquare.dataset.datum = (datum)
       const eventForDay = events.find(e => e.date === dayString);
 
       if (i - paddingDays === day && nav === 0) {
         daySquare.id = 'currentDay';
+        daySquare.dataset.datum = (datum)
       }
-
+      
       if (eventForDay) {
         const eventDiv = document.createElement('div');
         eventDiv.classList.add('event');
@@ -94,9 +110,13 @@ function load() {
       daySquare.classList.add('padding');
     }
 
-    calendar.appendChild(daySquare);    
+    calendar.appendChild(daySquare);
+
+    
   }
+  
 }
+
 
 function closeModal() {
   eventTitleInput.classList.remove('error');
@@ -106,6 +126,7 @@ function closeModal() {
   eventTitleInput.value = '';
   clicked = null;
   load();
+  window.location.reload(true);
 }
 
 function saveEvent() {
@@ -129,13 +150,10 @@ function saveEvent() {
     
     date1 = lasteventDATE.replace('/','-');
     date2 = date1.replace('/','-');
-    //console.log(date2) // mm-dd-yyyy
 
     const [month, day, year] = date2.split('-');
 
     const result = [year, month, day].join('-');
-    //console.log(result); //yyyy-mm-dd
-    //console.log("assets/API/insert_event.php?date=" + result + "&&title=" + lasteventNAME+ "&&userID=" + lasteventID); //
 
     fetch("assets/API/insert_event.php?date=" + lasteventDATE + "&&title=" + lasteventNAME+ "&&userID=" + lasteventID)
     .then(function (response){
@@ -161,12 +179,63 @@ function deleteEvent() {
 function initButtons() {
   document.getElementById('nextButton').addEventListener('click', () => {
     nav++;
+    
     load();
+    var userID = sessionStorage.getItem('userID');
+    fetch("assets/API/get_events.php?userID=" + userID)
+    .then(function (response){
+      return response.json();
+    })
+    .then(function  (data){
+      var daystesting = document.querySelectorAll(".day");
+      
+      for (var i = 0; i < data.length ; i++){
+        for (var j = 0; j < daystesting.length ; j++){
+          if (daystesting[j].dataset.datum == data[i].event_date){
+            // daystesting[j].innerHTML += "<br>" + "<br>" + data[i].event_name;
+            const eventDiv = document.createElement('div');
+            eventDiv.classList.add('event');
+            // eventDiv.setAttribute("id","event" + i);
+            eventDiv.innerText = data[i].event_name;
+            daystesting[j].appendChild(eventDiv);
+            events.push(data[i].event_date);
+            console.log(events)
+          }
+        }
+          
+      }
+            
+        });
   });
 
   document.getElementById('backButton').addEventListener('click', () => {
     nav--;
     load();
+    var userID = sessionStorage.getItem('userID');
+          fetch("assets/API/get_events.php?userID=" + userID)
+          .then(function (response){
+            return response.json();
+          })
+          .then(function  (data){
+            var daystesting = document.querySelectorAll(".day");
+            
+            for (var i = 0; i < data.length ; i++){
+              for (var j = 0; j < daystesting.length ; j++){
+                if (daystesting[j].dataset.datum == data[i].event_date){
+                  // daystesting[j].innerHTML += "<br>" + "<br>" + data[i].event_name;
+                  const eventDiv = document.createElement('div');
+                  eventDiv.classList.add('event');
+                  // eventDiv.setAttribute("id","event" + i);
+                  eventDiv.innerText = data[i].event_name;
+                  daystesting[j].appendChild(eventDiv);
+                  events.push(data[i].event_date);
+                  console.log(events)
+                }
+              }
+                
+            }
+            
+        });
   });
 
   document.getElementById('saveButton').addEventListener('click', saveEvent);
@@ -177,3 +246,22 @@ function initButtons() {
 
 initButtons();
 load();
+
+
+var deletebuttonNEW = document.getElementById('deletebutton');
+var userID = sessionStorage.getItem('userID');
+  
+
+deletebuttonNEW.addEventListener('click', function(){
+  var deleteEventNEW = document.getElementById('searchevents').value;
+  fetch("assets/API/delete_event.php?userID=" + userID + "&&eventName=" + deleteEventNEW)
+  .then(function (response){
+    return response.json();
+  })
+  .then(function  (data){
+    
+    
+  })
+
+  window.location.reload(true);
+});

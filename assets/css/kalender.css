@@ -273,3 +273,7 @@ button {
   position: absolute;
   background-color: rgba(0,0,0,0.8);
 }
+
+#deletebutton{
+  background-color:#92a1d1;
+}
