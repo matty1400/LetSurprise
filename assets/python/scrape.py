@@ -94,12 +94,12 @@ for wish in wishing:
     priceItem = (itemList[len(itemList)-1][2])
 
     try:
-        connection = mysql.connector.connect(host='localhost',
-                                             database='letsurprise',
-                                             user='root',
-                                             password='root')
+        connection = mysql.connector.connect(host='ID362590_letsurprise.db.webhosting.be',
+                                             database='ID362590_letsurprise',
+                                             user='ID362590_letsurprise',
+                                             password='prijstjelala123')
         insert_stmt = (
-            "INSERT INTO scrapeditems(price, img_url, nameItem, searchName)"
+            "INSERT INTO scrapedItems(price, img_url, nameItem, searchName)"
             "VALUES (%s, %s, %s, %s)"
         )
         data = (priceItem, urlItem, nameItemx, wish)
